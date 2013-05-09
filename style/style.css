@@ -1,0 +1,70 @@
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow
+   class when html element has overthrow class too 
+.overthrow-enabled .overthrow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}*/
+.tabfield {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  white-space: nowrap;
+  max-width: 100%;
+  border: 1px solid black;
+  position: relative;
+  height: 40px; }
+  .tabfield .arrow {
+    position: absolute;
+    background-color: #7279D8;
+    width: 10px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out; }
+  .tabfield .left {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 19px 10px 19px 0;
+    border-color: transparent #ffffff transparent transparent; }
+  .tabfield .right {
+    right: 0px;
+    top: 0px;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 19px 0 19px 10px;
+    border-color: transparent transparent transparent #ffffff; }
+
+.tabContent {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: -10px; }
+
+.tabs {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  display: inline-block; }
+  .tabs .link {
+    height: 40px;
+    display: block-inline;
+    border-left: 1px solid blue;
+    border-right: 1px solid blue;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.23) inset;
+    background-color: #e6e6e6;
+    font-weight: bold; }
+    .tabs .link.active {
+      background-color: #1924B1;
+      color: white;
+      text-shadow: 1px 1px #000000; }

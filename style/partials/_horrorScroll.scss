@@ -1,0 +1,91 @@
+
+
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow
+   class when html element has overthrow class too 
+.overthrow-enabled .overthrow {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}*/
+
+// http://colorschemedesigner.com/#3X11Tw0w0w0w0
+
+$horrerTabHeight: 40px;
+$horrorArrowHeight: (($horrerTabHeight / 2) - 1);
+
+.tabfield {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	white-space: nowrap;
+	max-width: 100%;
+	border: 1px solid black;
+	position: relative;
+	height: $horrerTabHeight;
+
+	.arrow {
+		position: absolute;
+		background-color: #7279D8;
+		width: 10px;
+		z-index: 1;
+		opacity: 0;
+		-webkit-transition: opacity 0.5s ease-in-out;
+    	-moz-transition: opacity 0.5s ease-in-out;
+    	transition: opacity 0.5s ease-in-out;
+	}
+
+	.left {
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: $horrorArrowHeight 10px $horrorArrowHeight 0;
+		border-color: transparent #ffffff transparent transparent;
+	}
+
+	.right {
+		right: 0px;
+		top: 0px;
+		width: 0px;
+		height: 0px;
+		border-style: solid;
+		border-width: $horrorArrowHeight 0 $horrorArrowHeight 10px;
+		border-color: transparent transparent transparent #ffffff;
+	}
+}
+
+.tabContent {
+	height: $horrerTabHeight;
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
+.tabs {
+	max-width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	display: inline-block;
+
+	.link {
+		height: $horrerTabHeight;
+		display: block-inline;
+		border-left: 1px solid blue;
+		border-right: 1px solid blue;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding: 10px;
+		box-shadow: 0px -3px 3px 0px rgba(0, 0, 0, 0.23) inset;
+		background-color: rgb(230, 230, 230);
+		font-weight: bold;
+		
+		&.active {
+			background-color: #1924B1;
+			color: rgb(255, 255, 255);
+			text-shadow: 1px 1px #000000;
+		}
+	}
+}
